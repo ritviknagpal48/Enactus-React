@@ -1,30 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <title>Enactus NSUT</title>
+    <meta name="description" content="Enactus NSUT Website" />
+    <meta name="keywords" content="Social Entrepreneurshipn" />
+    <meta name="author" content="Tech Team" />
+    <!-- Favicons (created with http://realfavicongenerator.net/) OG-->
+    <link rel="apple-touch-icon" sizes="57x57" href="../enactus.png" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
+    />
+    <link rel="apple-touch-icon" sizes="60x60" href="../enactus.png" />
+    <link rel="icon" type="image/png" href="../enactus.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../enactus.png" sizes="16x16" />
+    <link rel="manifest" href="img/favicons/manifest.json" />
+    <link rel="shortcut icon" href="../enactus.png" />
+    <meta name="msapplication-TileColor" content="#00a8ff" />
+    <meta
+      name="msapplication-config"
+      content="img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Normalize -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- Owl -->
+    <link rel="stylesheet" type="text/css" href="css/owl.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <!-- Animate.css -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts/font-awesome-4.1.0/css/font-awesome.min.css"
+    />
+    <!-- Elegant Icons -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts/eleganticons/et-icons.css"
+    />
+    <!-- Main style -->
+    <link rel="stylesheet" type="text/css" href="css/cardio.css?v=2" />
+
+    <style>
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+      /* #insta{
+            margin-left: 30px;
+            margin-right: 30px;
+        } */
+      .h {
+        margin-top: 0px;
+      }
+      @media only screen and (max-width: 1024px) {
+        #cursorCus {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 700px) {
+        .service.description {
+          font-size: 95%;
+        }
+      }
+      @media (min-width: 320px) and (max-width: 767px) {
+        #welcome {
+          font-size: 55px;
+        }
+        #int {
+          margin-top: 65px;
+        }
+        #insta {
+          margin-left: 0px;
+        }
+        .card-text {
+          padding: 20px;
+        }
+        .cont {
+          left: 0px;
+        }
+        .h {
+          margin-top: 10px;
+        }
+      }
+
+      .owl-pagination .active span {
+        background-color: #2c2a43 !important;
+      }
+      .owl-theme .owl-controls .owl-buttons div {
+        background: transparent;
+        color: #869791;
+        font-size: 40px;
+        line-height: 300px;
+        margin: 0;
+        padding: 0 60px;
+        position: absolute;
+        top: 0;
+      }
+      .owl-theme .owl-controls .owl-buttons .owl-prev {
+        left: 0;
+        padding-left: 20px;
+      }
+      .owl-theme .owl-controls .owl-buttons .owl-next {
+        right: 0;
+        padding-right: 20px;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +147,64 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script type="text/javascript" src="/swiperJS/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <!-- <script>
+      var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true
+        },
+        pagination: {
+          el: '.swiper-pagination'
+        }
+      });
+    </script> -->
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/typewriter.js"></script>
+    <script src="js/jquery.onepagenav.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/counter1.js"></script>
+    <script type="text/javascript"></script>
+
+    <script type="text/javascript">
+      // var owl = $('.owl-carousel');
+      // owl.owlCarousel({
+      //   loop: false,
+      //   margin: 10,
+      //   navigation: true,
+      //   autoPlay: false,
+      //   navigationText: [
+      //     "<i class='fa fa-chevron-left'></i>",
+      //     "<i class='fa fa-chevron-right'></i>"
+      //   ],
+      //   autoplayTimeout: 4000,
+      //   autoplayHoverPause: true,
+      //   responsive: {
+      //     0: {
+      //       items: 1
+      //     },
+      //     600: {
+      //       items: 3
+      //     },
+      //     1000: {
+      //       items: 5
+      //     }
+      //   }
+      // });
+    </script>
   </body>
 </html>
